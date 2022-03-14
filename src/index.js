@@ -68,6 +68,9 @@ function Content() {
           </Html>
         </Block>
       </Block>
+      <Html style={{ width: 700 }} position={[300, 700]}>
+        <p className="title animate__heartBeat">Ghost Town</p>
+      </Html>
       <Block factor={1.2} offset={5.7}>
         <MultilineText top left size={w * 0.15} lineHeight={w / 3} position={[-w / 3.5, 0, -1]} color="#2fe8c3" text={"ZERO\nDOWN\nTIME"} />
       </Block>
