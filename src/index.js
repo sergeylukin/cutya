@@ -14,7 +14,7 @@ import "./styles.css"
 function Startup() {
   const ref = useRef()
   useFrame(() => (ref.current.material.opacity = lerp(ref.current.material.opacity, 0, 0.025)))
-  return <Plane ref={ref} color="#0e0e0f" position={[0, 0, 200]} scale={[100, 100, 1]} />
+  return <Plane ref={ref} color="#0e0e0f" position={[0, 0, 200]} scale={[100, 1, 1]} />
 }
 
 function Paragraph({ image, index, offset, factor, header, aspect, text }) {
@@ -68,17 +68,6 @@ function Content() {
           </Html>
         </Block>
       </Block>
-      <Html style={{ width: 700 }} position={[300, 700]}>
-        <p className="title animate__heartBeat">Ghost Town</p>
-      </Html>
-      {state.paragraphs.map((props, index) => (
-        <Paragraph key={index} index={index} {...props} image={images[index]} />
-      ))}
-      {state.stripes.map(({ offset, color, height }, index) => (
-        <Block key={index} factor={-1.5} offset={offset}>
-          <Plane args={[50, height, 32, 32]} shift={-4} color={color} rotation={[0, 0, Math.PI / 8]} position={[0, 0, -10]} />
-        </Block>
-      ))}
       <Block factor={1.25} offset={8}>
         <Html style={{ color: "white" }} className="bottom-left" position={[-canvasWidth / 2, -canvasHeight / 2, 0]}>
           Ghost Town
