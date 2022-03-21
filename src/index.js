@@ -62,6 +62,18 @@ function Content() {
             <Plane map={logo[0]} shift={5} factor={0.3} aspect={0.1} args={[11, 8, 8, 8]} size={8} />
           </group>
         </Block>
+        <Block factor={1.25} offset={1}>
+          <Html style={{ color: "white", textAlign: "center", margin: "auto" }} className="bottom-left" position={[-canvasWidth / 2, -canvasHeight / 2, 0]}>
+            <iframe
+              width={560}
+              height={315}
+              src={"https://www.youtube.com/embed/lfbuTY9fS_A"}
+              title={"Cutya"}
+              frameborder={0}
+              allow={"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"}
+              allowfullscreen></iframe>
+          </Html>
+        </Block>
         <Block factor={1.0}>
           <Html className="bottom-left" style={{ color: "white" }} position={[-canvasWidth / 2, -canvasHeight / 2, 0]}>
             Cutya
